@@ -6,7 +6,7 @@ public class JsonProductContextFactory : IDbContextFactory<ProductContext>
     public ProductContext CreateDbContext()
     {
         var options = new DbContextOptionsBuilder<ProductContext>()
-            .UseInMemoryDatabase(databaseName: "Product")
+            .UseInMemoryDatabase("Product")
             .Options;
 
         var context = new ProductContext(options);
